@@ -10,7 +10,7 @@ type Strings = {
   badges: { name: string; who: string; task: string; learn: string; tone: 'teal' | 'clay' | 'ink' }[];
   newsTitle: string; newsLead: string;
   openTitle: string; openText: string; code: string;
-  footer: string; docTitle: string;
+  footer: string; contact: string; docTitle: string;
   live: { founded: string; reading: string; readAt: string; unreachable: string;
     members: string; council: string; councilVal: string; councilSub: string;
     treasury: string; treasurySub: string; treasuryUnread: string; paidOut: string; paidSub: string; paidSubOne: string; sats: string;
@@ -54,6 +54,7 @@ export const T: Record<Lang, Strings> = {
     openText: 'The kit is open source: the app, the relay, the guide and the workshop cards. Any community can build its own DAO with it.',
     code: 'The kit: btc-dao',
     footer: 'Build Your Own Bitcoin DAO',
+    contact: 'Contact:',
     docTitle: 'byob.zone · Build Your Own Bitcoin DAO',
     live: {
       founded: 'Founded {date}', reading: 'Reading the DAO’s record…', readAt: 'Read from the DAO’s own record at {time}, the same way members’ phones read it.',
@@ -104,6 +105,7 @@ export const T: Record<Lang, Strings> = {
     openText: 'Il kit è open source: l’app, il relay, la guida e le schede del workshop. Qualsiasi comunità può costruire la propria DAO.',
     code: 'Il kit: btc-dao',
     footer: 'Costruisci la tua DAO Bitcoin',
+    contact: 'Contatti:',
     docTitle: 'byob.zone · Costruisci la tua DAO Bitcoin',
     live: {
       founded: 'Fondata il {date}', reading: 'Lettura del registro della DAO…', readAt: 'Letto dal registro della DAO alle {time}, come lo leggono i telefoni dei membri.',

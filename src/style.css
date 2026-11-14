@@ -140,6 +140,8 @@ h1, h2, h3, p { margin: 0; }
 .btn-ghost:hover { background: #1B3A40; color: #fff; }
 
 .foot { padding-top: 28px; padding-bottom: 40px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 24px; justify-content: space-between; font-size: 14px; color: var(--muted); }
+.foot-right { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 24px; }
+.foot-right a { color: var(--ink); }
 .foot-left { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; }
 
 a:focus-visible, button:focus-visible { outline: 3px solid var(--dot); outline-offset: 2px; }
