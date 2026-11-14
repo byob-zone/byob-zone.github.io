@@ -10,9 +10,11 @@
   --teal: #1F6B70;
   --teal-bg: #E2EFEE;
   --teal-ink: #174F53;
-  --clay: #B54D0A;
-  --clay-ink: #8A3A07;
-  --clay-bg: #FBE7D8;
+  /* One accent: the orange of the wordmark's square. It is too light for text on white, so it colours shapes
+     (the square, buttons, badge rings, a square before accent labels) and the text beside it stays ink. */
+  --orange: #E8834A;
+  --orange-hover: #F09A66;
+  --orange-bg: #FBE3D3;
   --dot: #E8834A;
   --head-sub: #C9D6D4;
   --sans: 'IBM Plex Sans', system-ui, sans-serif;
@@ -31,7 +33,9 @@ h1, h2, h3, p { margin: 0; }
 .note { font-size: 15px; color: var(--muted); }
 .muted { color: var(--ink-2); }
 .kicker { margin: 0 0 16px; font-family: var(--mono); font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.kicker.accent { color: var(--clay-ink); margin-bottom: 10px; }
+.kicker.accent { color: var(--ink); margin-bottom: 10px; }
+/* An accent label: the wordmark's square before it */
+.kicker.accent::before, .step-n::before, .now-label::before, .reward::before { content: ''; display: inline-block; width: 0.55em; height: 0.55em; background: var(--orange); margin-right: 0.5em; vertical-align: 0.05em; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
 
 /* The wordmark: name in bold, an orange square, then the second word */
@@ -42,7 +46,7 @@ h1, h2, h3, p { margin: 0; }
 .top .wordmark { font-size: 24px; color: #fff; }
 .top .wm-b { color: var(--head-sub); }
 .wordmark-ink { color: var(--ink); }
-.wordmark-ink .wm-dot { background: var(--clay); }
+.wordmark-ink .wm-dot { background: var(--orange); }
 .wordmark-ink .wm-b { color: var(--muted); }
 .wordmark.small { font-size: 16px; }
 
@@ -58,7 +62,7 @@ h1, h2, h3, p { margin: 0; }
 
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
 .step { padding: 24px; display: flex; flex-direction: column; gap: 10px; }
-.step-n { font-family: var(--mono); font-size: 15px; font-weight: 600; color: var(--clay-ink); }
+.step-n { font-family: var(--mono); font-size: 15px; font-weight: 600; color: var(--ink); }
 .step h3 { font-size: 21px; font-weight: 600; }
 .step p { font-size: 16px; line-height: 1.55; color: var(--ink-2); }
 
@@ -70,8 +74,8 @@ h1, h2, h3, p { margin: 0; }
 .chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: var(--teal-bg); color: var(--teal-ink); font-size: 14px; font-weight: 600; }
 .chip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
 .dao-desc { font-size: 18px; line-height: 1.55; color: var(--ink-2); }
-.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; border-radius: 10px; background: var(--clay); color: #fff; font-weight: 600; font-size: 18px; text-decoration: none; margin-top: 8px; }
-.btn:hover { background: var(--clay-ink); color: #fff; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; border-radius: 10px; background: var(--orange); color: var(--ink); font-weight: 600; font-size: 18px; text-decoration: none; margin-top: 8px; }
+.btn:hover { background: var(--orange-hover); color: var(--ink); }
 .facts { flex: 1 1 300px; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-content: start; }
 .fact { background: var(--bg); border-radius: 12px; padding: 16px; }
 .fact dt { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
@@ -81,7 +85,7 @@ h1, h2, h3, p { margin: 0; }
 .dao-now[hidden] { display: none; }
 .now-cell { flex: 1 1 320px; min-width: 0; padding: 24px 32px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
 .now-cell + .now-cell { border-left: 1px solid var(--line-2); }
-.now-label { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--clay-ink); }
+.now-label { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); }
 .now-title { font-size: 20px; font-weight: 600; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
 .now-title:hover { text-decoration: underline; }
 .countdown { display: flex; align-items: baseline; gap: 10px; }
@@ -105,14 +109,14 @@ h1, h2, h3, p { margin: 0; }
 .badge { border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: flex; gap: 18px; background: var(--soft); }
 .badge-mark { flex: 0 0 64px; width: 64px; height: 64px; border-radius: 50%; border: 3px solid; background: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 600; font-size: 20px; }
 .badge-mark.teal { border-color: var(--teal); color: var(--teal); }
-.badge-mark.clay { border-color: var(--clay); color: var(--clay); }
+.badge-mark.clay { border-color: var(--orange); color: var(--ink); }
 .badge-mark.ink { border-color: var(--ink); color: var(--ink); }
 .badge-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .badge-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
 .badge-head h3 { font-size: 19px; font-weight: 600; }
 .badge-body p { font-size: 15px; line-height: 1.5; }
 .badge-body strong { font-weight: 600; color: var(--ink); }
-.reward { margin-top: 4px; font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--clay-ink); }
+.reward { margin-top: 4px; font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--ink); }
 .band-light .note:last-child { margin-top: 28px; line-height: 1.55; max-width: 44rem; }
 
 .news-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 20px; }
@@ -121,7 +125,7 @@ h1, h2, h3, p { margin: 0; }
 .post-side { flex: 0 0 132px; display: flex; flex-direction: column; gap: 6px; }
 .post-side time { font-size: 14px; font-weight: 600; }
 .tag { align-self: flex-start; padding: 3px 10px; border-radius: 999px; background: var(--teal-bg); color: var(--teal-ink); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
-.tag-next { background: var(--clay-bg); color: var(--clay-ink); }
+.tag-next { background: var(--orange); color: var(--ink); }
 .post-body { flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
 .post-body h3 { font-size: 19px; font-weight: 600; }
 .post-body p { font-size: 16px; line-height: 1.55; color: var(--ink-2); }
