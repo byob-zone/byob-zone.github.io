@@ -13,7 +13,9 @@ type Strings = {
   footer: string; docTitle: string;
   live: { founded: string; reading: string; readAt: string; unreachable: string;
     members: string; council: string; councilVal: string; councilSub: string;
-    treasury: string; treasurySub: string; treasuryUnread: string; paidOut: string; paidSub: string; paidSubOne: string; sats: string };
+    treasury: string; treasurySub: string; treasuryUnread: string; paidOut: string; paidSub: string; paidSubOne: string; sats: string;
+    voteOpen: string; closesIn: string; closed: string; voteNote: string; moreOpen: string; noVote: string; openVote: string;
+    latestPayout: string; payoutFor: string; paidOn: string; onChain: string; noPayout: string };
 };
 
 export const T: Record<Lang, Strings> = {
@@ -57,6 +59,9 @@ export const T: Record<Lang, Strings> = {
       unreachable: 'The DAO’s record could not be read just now. Try again later.',
       members: 'Members', council: 'Council', councilVal: '{m} of {n}', councilSub: 'signatures per payment',
       treasury: 'Treasury', treasurySub: '{network} sats', treasuryUnread: 'not read just now', paidOut: 'Paid out', paidSub: 'in {n} rounds', paidSubOne: 'in 1 round', sats: 'sats',
+      voteOpen: 'Vote open now', closesIn: 'closes in', closed: 'Voting has closed: the count follows.', voteNote: 'The count is published at the close; anyone can recheck it.',
+      moreOpen: '+ {n} more open', noVote: 'No vote is open right now.', openVote: 'See the proposal',
+      latestPayout: 'Latest payout', payoutFor: 'for {titles}', paidOn: 'paid {date}', onChain: 'See it on the blockchain', noPayout: 'No payout yet.',
     },
   },
   it: {
@@ -99,6 +104,9 @@ export const T: Record<Lang, Strings> = {
       unreachable: 'Il registro della DAO non si può leggere in questo momento. Riprova più tardi.',
       members: 'Membri', council: 'Consiglio', councilVal: '{m} su {n}', councilSub: 'firme per pagamento',
       treasury: 'Tesoreria', treasurySub: 'sats {network}', treasuryUnread: 'non letta ora', paidOut: 'Pagati', paidSub: 'in {n} turni', paidSubOne: 'in 1 turno', sats: 'sats',
+      voteOpen: 'Votazione aperta', closesIn: 'chiude tra', closed: 'La votazione è chiusa: segue il conteggio.', voteNote: 'Il conteggio è pubblicato alla chiusura; chiunque può ricontrollarlo.',
+      moreOpen: '+ altre {n} aperte', noVote: 'Nessuna votazione aperta in questo momento.', openVote: 'Vedi la proposta',
+      latestPayout: 'Ultimo pagamento', payoutFor: 'per {titles}', paidOn: 'pagato il {date}', onChain: 'Vedilo sulla blockchain', noPayout: 'Ancora nessun pagamento.',
     },
   },
 };

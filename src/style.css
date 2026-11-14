@@ -77,6 +77,19 @@ h1, h2, h3, p { margin: 0; }
 .fact dt { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
 .fact dd { margin: 0; font-family: var(--mono); font-size: 20px; font-weight: 600; }
 .fact dd.fact-sub { margin-top: 4px; font-family: var(--sans); font-size: 13px; font-weight: 400; color: var(--muted); }
+.dao-now { border-top: 1px solid var(--line-2); display: flex; flex-wrap: wrap; }
+.dao-now[hidden] { display: none; }
+.now-cell { flex: 1 1 320px; min-width: 0; padding: 24px 32px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.now-cell + .now-cell { border-left: 1px solid var(--line-2); }
+.now-label { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--clay-ink); }
+.now-title { font-size: 20px; font-weight: 600; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+.now-title:hover { text-decoration: underline; }
+.countdown { display: flex; align-items: baseline; gap: 10px; }
+.clock { font-size: 30px; font-weight: 600; color: var(--ink); }
+.now-closed { font-size: 16px; font-weight: 600; color: var(--teal-ink); }
+.now-sats { font-size: 26px; font-weight: 600; }
+.now-what { font-size: 16px; line-height: 1.5; color: var(--ink-2); overflow-wrap: anywhere; }
+@media (max-width: 720px) { .now-cell + .now-cell { border-left: 0; border-top: 1px solid var(--line-2); } }
 .dao-foot { border-top: 1px solid var(--line-2); padding: 18px 32px; background: var(--soft); font-size: 15px; color: var(--ink-2); }
 
 .band-light { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 56px; }

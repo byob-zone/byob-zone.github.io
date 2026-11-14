@@ -100,12 +100,69 @@ function renderDao(lang: Lang) {
       fact(L.treasury, p.treasury === undefined ? '—' : num(p.treasury), p.treasury === undefined ? L.treasuryUnread : fmt(L.treasurySub, { network })),
       fact(L.paidOut, num(p.paidOut), p.paidRounds === 1 ? L.paidSubOne : fmt(L.paidSub, { n: p.paidRounds })),
     ]);
+    renderNow(lang, p);
     if (foot) foot.textContent = fmt(L.readAt, { time: new Date(p.readAt).toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' }) });
     return;
   }
   fill('facts', t.facts.map(([label, value]) => fact(label, value)));
   if (foot && pulse === 'reading') foot.textContent = t.pulseSoon;
   if (foot && pulse !== 'reading' && pulse.kind === 'unreachable') foot.textContent = L.unreachable;
+}
+
+let ticker: number | undefined;
+
+/** What is happening now: the open vote with its countdown, and the latest payout. */
+function renderNow(lang: Lang, p: Extract<PulseResult, { kind: 'pulse' }>['pulse']) {
+  const L = T[lang].live;
+  const locale = lang === 'it' ? 'it-IT' : 'en-GB';
+  const box = document.getElementById('now');
+  if (!box) return;
+  if (ticker !== undefined) clearInterval(ticker);
+
+  const vote = el('div', 'now-cell');
+  if (p.vote) {
+    const v = p.vote;
+    const title = el('a', 'now-title', v.title);
+    title.href = v.link;
+    const count = el('div', 'countdown');
+    const label = el('span', 'note', L.closesIn);
+    const clock = el('span', 'clock mono');
+    count.append(label, clock);
+    const note = el('p', 'note', L.voteNote);
+    vote.append(el('span', 'now-label', L.voteOpen), title, count, note);
+    if (v.others > 0) vote.append(el('span', 'note', fmt(L.moreOpen, { n: v.others })));
+    const tick = () => {
+      const left = Math.max(0, Math.round(v.closeAt - (Date.now() + p.offsetMs) / 1000));
+      if (left === 0) {
+        count.replaceChildren(el('span', 'now-closed', L.closed));
+        if (ticker !== undefined) clearInterval(ticker);
+        return;
+      }
+      const d = Math.floor(left / 86400), h = Math.floor((left % 86400) / 3600), m = Math.floor((left % 3600) / 60), s = left % 60;
+      const two = (n: number) => String(n).padStart(2, '0');
+      clock.textContent = d > 0 ? `${d}d ${two(h)}:${two(m)}` : h > 0 ? `${h}:${two(m)}:${two(s)}` : `${m}:${two(s)}`;
+    };
+    tick();
+    ticker = window.setInterval(tick, 1000);
+  } else {
+    vote.append(el('span', 'now-label', L.voteOpen), el('p', 'note', L.noVote));
+  }
+
+  const pay = el('div', 'now-cell');
+  pay.append(el('span', 'now-label', L.latestPayout));
+  if (p.payout) {
+    const x = p.payout;
+    const sats = el('span', 'now-sats mono', `${x.sats.toLocaleString(locale)} ${L.sats}`);
+    const what = el('p', 'now-what', [x.titles.length ? fmt(L.payoutFor, { titles: x.titles.join(' · ') }) : '', fmt(L.paidOn, { date: new Date(x.at * 1000).toLocaleDateString(locale, { day: 'numeric', month: 'long' }) })].filter(Boolean).join(' · '));
+    const link = el('a', '', L.onChain);
+    link.href = x.link;
+    link.rel = 'noopener';
+    pay.append(sats, what, link);
+  } else {
+    pay.append(el('p', 'note', L.noPayout));
+  }
+  box.replaceChildren(vote, pay);
+  box.hidden = false;
 }
 
 function initialLang(): Lang {
