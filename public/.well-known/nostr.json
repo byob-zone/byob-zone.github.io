@@ -3,6 +3,6 @@
     "_": "16d355018f418e4ebfc1bc41d9ef7df9eb502e0afe970857506265f782683f6c"
   },
   "relays": {
-    "16d355018f418e4ebfc1bc41d9ef7df9eb502e0afe970857506265f782683f6c": ["wss://nos.lol", "wss://relay.damus.io"]
+    "16d355018f418e4ebfc1bc41d9ef7df9eb502e0afe970857506265f782683f6c": ["wss://relay.primal.net", "wss://relay.damus.io", "wss://nos.lol", "wss://relay.snort.social"]
   }
 }
