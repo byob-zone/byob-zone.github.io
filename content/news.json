@@ -1,0 +1,39 @@
+[
+  {
+    "date": { "en": "[workshop date]", "it": "[data del workshop]" },
+    "next": true,
+    "tag": { "en": "Next", "it": "Prossimo" },
+    "title": { "en": "The ALPHA DAO workshop", "it": "Il workshop di ALPHA DAO" },
+    "text": {
+      "en": "Five council members cut their keys by hand and found ALPHA DAO in one meeting. [Place and time]",
+      "it": "Cinque membri del consiglio tagliano a mano le loro chiavi e fondano ALPHA DAO in un solo incontro. [Luogo e ora]"
+    }
+  },
+  {
+    "date": { "en": "14 Nov 2026", "it": "14 nov 2026" },
+    "tag": { "en": "Site", "it": "Sito" },
+    "title": { "en": "ALPHA DAO has its own address", "it": "ALPHA DAO ha il suo indirizzo" },
+    "text": {
+      "en": "alpha.byob.zone: a web address of its own, so its members’ keys and passkeys are kept apart from every other DAO.",
+      "it": "alpha.byob.zone: un indirizzo web tutto suo, così le chiavi e le passkey dei membri restano separate da ogni altra DAO."
+    }
+  },
+  {
+    "date": { "en": "14 Nov 2026", "it": "14 nov 2026" },
+    "tag": { "en": "Release", "it": "Versione" },
+    "title": { "en": "btc-dao v0.9.0", "it": "btc-dao v0.9.0" },
+    "text": {
+      "en": "Five reviewers read the whole kit; every finding marked for before the workshop is fixed. 292 end-to-end checks pass.",
+      "it": "Cinque revisori hanno letto tutto il kit; ogni problema da risolvere prima del workshop è risolto. 292 controlli end-to-end superati."
+    }
+  },
+  {
+    "date": { "en": "13 Nov 2026", "it": "13 nov 2026" },
+    "tag": { "en": "Field test", "it": "Prova sul campo" },
+    "title": { "en": "Counts that correct themselves", "it": "Conteggi che si correggono da soli" },
+    "text": {
+      "en": "On COUNCIL DAO two phones published different counts. Now the fuller count wins, and nobody has to choose between them.",
+      "it": "Su COUNCIL DAO due telefoni hanno pubblicato conteggi diversi. Ora vince il conteggio più completo, e nessuno deve scegliere tra i due."
+    }
+  }
+]

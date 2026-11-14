@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- CSP -->
+  <title>byob.zone · Build Your Own Bitcoin DAO</title>
+  <meta name="description" content="Build Your Own Bitcoin DAO. A community holds a bitcoin treasury together; ALPHA DAO is the first one built." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#10292E" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="wordmark" href="/" aria-label="byob.zone">
+        <span class="wm-a" aria-hidden="true">byob</span><span class="wm-dot" aria-hidden="true"></span><span class="wm-b" aria-hidden="true">zone</span>
+      </a>
+      <div class="lang" role="group" aria-label="Language / Lingua">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="it" aria-pressed="false">IT</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <h1 data-t="title">Build Your Own Bitcoin DAO</h1>
+      <p class="lead" data-t="lead"></p>
+    </section>
+
+    <section class="wrap block" id="how">
+      <h2 class="h2" data-t="howTitle"></h2>
+      <p class="sub" data-t="howLead"></p>
+      <ol class="steps" id="steps"></ol>
+    </section>
+
+    <section class="wrap block">
+      <h2 class="kicker" data-t="firstBuilt"></h2>
+      <article class="dao">
+        <div class="dao-main">
+          <div class="dao-text">
+            <div class="dao-name-row">
+              <h3 class="dao-name wordmark wordmark-ink" aria-label="ALPHA DAO">
+                <span class="wm-a" aria-hidden="true">alpha</span><span class="wm-dot" aria-hidden="true"></span><span class="wm-b" aria-hidden="true">dao</span>
+              </h3>
+              <span class="chip"><span class="chip-dot" aria-hidden="true"></span><span data-t="status"></span></span>
+            </div>
+            <p class="dao-desc" data-t="alphaText"></p>
+            <a class="btn" href="https://alpha.byob.zone" data-t="enter"></a>
+          </div>
+          <dl class="facts" id="facts"></dl>
+        </div>
+        <p class="dao-foot" data-t="pulseSoon"></p>
+      </article>
+    </section>
+
+    <section class="band-light">
+      <div class="wrap block">
+        <p class="kicker accent" data-t="badgeKicker"></p>
+        <h2 class="h2" data-t="badgeTitle"></h2>
+        <p class="sub" data-t="badgeLead"></p>
+        <ul class="badges" id="badges"></ul>
+        <p class="note" data-t="badgeFoot"></p>
+      </div>
+    </section>
+
+    <section class="wrap block">
+      <div class="news-head">
+        <h2 class="h2" data-t="newsTitle"></h2>
+        <span class="note" data-t="newsLead"></span>
+      </div>
+      <div class="news" id="news"></div>
+    </section>
+
+    <section class="band-dark">
+      <div class="wrap open">
+        <div>
+          <h2 class="h2" data-t="openTitle"></h2>
+          <p data-t="openText"></p>
+        </div>
+        <a class="btn-ghost" href="https://github.com/Bitcoin-DAO/btc-dao" data-t="code"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span class="foot-left">
+      <span class="wordmark wordmark-ink small" aria-hidden="true"><span class="wm-a">byob</span><span class="wm-dot"></span><span class="wm-b">zone</span></span>
+      <span data-t="footer"></span>
+    </span>
+    <span class="mono">testnet4</span>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
