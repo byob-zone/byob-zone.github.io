@@ -90,6 +90,13 @@ h1, h2, h3, p { margin: 0; }
 .now-sats { font-size: 26px; font-weight: 600; }
 .now-what { font-size: 16px; line-height: 1.5; color: var(--ink-2); overflow-wrap: anywhere; }
 @media (max-width: 720px) { .now-cell + .now-cell { border-left: 0; border-top: 1px solid var(--line-2); } }
+.dao-story { border-top: 1px solid var(--line-2); padding: 24px 32px 28px; }
+.dao-story[hidden] { display: none; }
+.story-title { margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.story-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.moment { display: flex; gap: 16px; align-items: baseline; }
+.moment-day { flex: 0 0 84px; font-size: 14px; font-weight: 600; color: var(--teal); }
+.moment-text { font-size: 16px; line-height: 1.5; overflow-wrap: anywhere; }
 .dao-foot { border-top: 1px solid var(--line-2); padding: 18px 32px; background: var(--soft); font-size: 15px; color: var(--ink-2); }
 
 .band-light { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 56px; }

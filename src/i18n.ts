@@ -15,7 +15,8 @@ type Strings = {
     members: string; council: string; councilVal: string; councilSub: string;
     treasury: string; treasurySub: string; treasuryUnread: string; paidOut: string; paidSub: string; paidSubOne: string; sats: string;
     voteOpen: string; closesIn: string; closed: string; voteNote: string; moreOpen: string; noVote: string; openVote: string;
-    latestPayout: string; payoutFor: string; paidOn: string; onChain: string; noPayout: string };
+    latestPayout: string; payoutFor: string; paidOn: string; onChain: string; noPayout: string;
+    storyTitle: string; day: string; sFounded: string; sPassed: string; sRejected: string; sPaid: string; sPaidFor: string; sMoved: string; sJoined: string; sLeft: string };
 };
 
 export const T: Record<Lang, Strings> = {
@@ -62,6 +63,11 @@ export const T: Record<Lang, Strings> = {
       voteOpen: 'Vote open now', closesIn: 'closes in', closed: 'Voting has closed: the count follows.', voteNote: 'The count is published at the close; anyone can recheck it.',
       moreOpen: '+ {n} more open', noVote: 'No vote is open right now.', openVote: 'See the proposal',
       latestPayout: 'Latest payout', payoutFor: 'for {titles}', paidOn: 'paid {date}', onChain: 'See it on the blockchain', noPayout: 'No payout yet.',
+      storyTitle: 'The story so far', day: 'Day {n}',
+      sFounded: 'Founded by {n} members, with a council of {k}: {m} of {k} sign every payment.',
+      sPassed: 'Vote passed: {title}.', sRejected: 'Vote did not pass: {title}.',
+      sPaid: 'Paid {sats} sats, signed by the council.', sPaidFor: 'Paid {sats} sats for {titles}, signed by the council.',
+      sMoved: 'The treasury moved to the new council’s wallet.', sJoined: '{name} joined.', sLeft: '{name} left.',
     },
   },
   it: {
@@ -107,6 +113,11 @@ export const T: Record<Lang, Strings> = {
       voteOpen: 'Votazione aperta', closesIn: 'chiude tra', closed: 'La votazione è chiusa: segue il conteggio.', voteNote: 'Il conteggio è pubblicato alla chiusura; chiunque può ricontrollarlo.',
       moreOpen: '+ altre {n} aperte', noVote: 'Nessuna votazione aperta in questo momento.', openVote: 'Vedi la proposta',
       latestPayout: 'Ultimo pagamento', payoutFor: 'per {titles}', paidOn: 'pagato il {date}', onChain: 'Vedilo sulla blockchain', noPayout: 'Ancora nessun pagamento.',
+      storyTitle: 'La storia finora', day: 'Giorno {n}',
+      sFounded: 'Fondata da {n} membri, con un consiglio di {k}: {m} su {k} firmano ogni pagamento.',
+      sPassed: 'Votazione approvata: {title}.', sRejected: 'Votazione non approvata: {title}.',
+      sPaid: 'Pagati {sats} sats, firmati dal consiglio.', sPaidFor: 'Pagati {sats} sats per {titles}, firmati dal consiglio.',
+      sMoved: 'La tesoreria è passata al portafoglio del nuovo consiglio.', sJoined: 'Nuovo membro: {name}.', sLeft: '{name} ha lasciato la DAO.',
     },
   },
 };

@@ -163,6 +163,34 @@ function renderNow(lang: Lang, p: Extract<PulseResult, { kind: 'pulse' }>['pulse
   }
   box.replaceChildren(vote, pay);
   box.hidden = false;
+  renderStory(lang, p);
+}
+
+/** The story so far: the latest moments in the record, newest first, by day since the founding. */
+function renderStory(lang: Lang, p: Extract<PulseResult, { kind: 'pulse' }>['pulse']) {
+  const L = T[lang].live;
+  const locale = lang === 'it' ? 'it-IT' : 'en-GB';
+  const box = document.getElementById('story');
+  if (!box || !p.story.length) return;
+  const sats = (n: number) => n.toLocaleString(locale);
+  const items = p.story.map(m => {
+    const text =
+      m.kind === 'founded' ? fmt(L.sFounded, { n: m.members, k: m.council, m: m.threshold })
+      : m.kind === 'passed' ? fmt(L.sPassed, { title: m.title })
+      : m.kind === 'rejected' ? fmt(L.sRejected, { title: m.title })
+      : m.kind === 'paid' ? (m.titles.length ? fmt(L.sPaidFor, { sats: sats(m.sats), titles: m.titles.join(' · ') }) : fmt(L.sPaid, { sats: sats(m.sats) }))
+      : m.kind === 'moved' ? L.sMoved
+      : m.kind === 'joined' ? fmt(L.sJoined, { name: m.name })
+      : m.kind === 'left' ? fmt(L.sLeft, { name: m.name })
+      : '';
+    const li = el('li', 'moment');
+    li.append(el('span', 'moment-day mono', fmt(L.day, { n: Math.floor((m.at - p.founded) / 86400) + 1 })), el('span', 'moment-text', text));
+    return li;
+  });
+  const list = el('ol', 'story-list');
+  list.append(...items);
+  box.replaceChildren(el('h4', 'story-title', L.storyTitle), list);
+  box.hidden = false;
 }
 
 function initialLang(): Lang {
