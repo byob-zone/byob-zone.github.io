@@ -33,7 +33,8 @@ h1, h2, h3, p { margin: 0; }
 .note { font-size: 15px; color: var(--muted); }
 .muted { color: var(--ink-2); }
 .kicker { margin: 0 0 16px; font-family: var(--mono); font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.kicker.accent { color: var(--ink); margin-bottom: 10px; }
+.kicker.accent { color: var(--ink); }
+.band-light .kicker.accent { margin-bottom: 10px; }
 /* An accent label: the wordmark's square before it */
 .kicker.accent::before, .step-n::before, .now-label::before, .reward::before { content: ''; display: inline-block; width: 0.55em; height: 0.55em; background: var(--orange); margin-right: 0.5em; vertical-align: 0.05em; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
