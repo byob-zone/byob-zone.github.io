@@ -11,6 +11,9 @@ type Strings = {
   newsTitle: string; newsLead: string;
   openTitle: string; openText: string; code: string;
   footer: string; docTitle: string;
+  live: { founded: string; reading: string; readAt: string; unreachable: string;
+    members: string; council: string; councilVal: string; councilSub: string;
+    treasury: string; treasurySub: string; treasuryUnread: string; paidOut: string; paidSub: string; paidSubOne: string; sats: string };
 };
 
 export const T: Record<Lang, Strings> = {
@@ -49,6 +52,12 @@ export const T: Record<Lang, Strings> = {
     code: 'The kit: btc-dao',
     footer: 'Build Your Own Bitcoin DAO',
     docTitle: 'byob.zone · Build Your Own Bitcoin DAO',
+    live: {
+      founded: 'Founded {date}', reading: 'Reading the DAO’s record…', readAt: 'Read from the DAO’s own record at {time}, the same way members’ phones read it.',
+      unreachable: 'The DAO’s record could not be read just now. Try again later.',
+      members: 'Members', council: 'Council', councilVal: '{m} of {n}', councilSub: 'signatures per payment',
+      treasury: 'Treasury', treasurySub: '{network} sats', treasuryUnread: 'not read just now', paidOut: 'Paid out', paidSub: 'in {n} rounds', paidSubOne: 'in 1 round', sats: 'sats',
+    },
   },
   it: {
     title: 'Costruisci la tua DAO Bitcoin',
@@ -85,5 +94,11 @@ export const T: Record<Lang, Strings> = {
     code: 'Il kit: btc-dao',
     footer: 'Costruisci la tua DAO Bitcoin',
     docTitle: 'byob.zone · Costruisci la tua DAO Bitcoin',
+    live: {
+      founded: 'Fondata il {date}', reading: 'Lettura del registro della DAO…', readAt: 'Letto dal registro della DAO alle {time}, come lo leggono i telefoni dei membri.',
+      unreachable: 'Il registro della DAO non si può leggere in questo momento. Riprova più tardi.',
+      members: 'Membri', council: 'Consiglio', councilVal: '{m} su {n}', councilSub: 'firme per pagamento',
+      treasury: 'Tesoreria', treasurySub: 'sats {network}', treasuryUnread: 'non letta ora', paidOut: 'Pagati', paidSub: 'in {n} turni', paidSubOne: 'in 1 turno', sats: 'sats',
+    },
   },
 };

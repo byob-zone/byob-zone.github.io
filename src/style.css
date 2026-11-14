@@ -76,6 +76,7 @@ h1, h2, h3, p { margin: 0; }
 .fact { background: var(--bg); border-radius: 12px; padding: 16px; }
 .fact dt { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
 .fact dd { margin: 0; font-family: var(--mono); font-size: 20px; font-weight: 600; }
+.fact dd.fact-sub { margin-top: 4px; font-family: var(--sans); font-size: 13px; font-weight: 400; color: var(--muted); }
 .dao-foot { border-top: 1px solid var(--line-2); padding: 18px 32px; background: var(--soft); font-size: 15px; color: var(--ink-2); }
 
 .band-light { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 56px; }
