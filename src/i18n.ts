@@ -43,10 +43,10 @@ export const T: Record<Lang, Strings> = {
     badgeFoot: 'Nobody hands out badges: every phone reads them from the DAO’s record, so anyone can check them. They carry no votes and no rank: every member counts the same.',
     task: 'Do:', learn: 'You learn:', reward: '+ [n] sats',
     badges: [
+      { name: 'Wallet', who: 'every member', task: 'Add your bitcoin address to your profile.', learn: 'Your own wallet, your own keys: the DAO pays you there, and no one else can move those coins.', tone: 'ink' },
       { name: 'Voice', who: 'every member', task: 'Cast a vote on an open proposal.', learn: 'One member, one vote, from your phone; the count is published and anyone can redo it.', tone: 'teal' },
       { name: 'Proposer', who: 'every member', task: 'Publish a proposal, even a small one.', learn: 'How an idea becomes a decision: the voting period, the quorum, the majority it needs.', tone: 'teal' },
       { name: 'Builder', who: 'every member', task: 'Claim a bounty, deliver it, report it.', learn: 'How the treasury pays for work: on delivery, in tranches, in public.', tone: 'clay' },
-      { name: 'Wallet', who: 'every member', task: 'Add your bitcoin address to your profile.', learn: 'Your own wallet, your own keys: the DAO pays you there, and no one else can move those coins.', tone: 'ink' },
     ],
     newsTitle: 'News from the zone',
     newsLead: 'Short posts, newest first.',
@@ -94,10 +94,10 @@ export const T: Record<Lang, Strings> = {
     badgeFoot: 'Nessuno assegna i badge: ogni telefono li legge dal registro della DAO, quindi chiunque può verificarli. Non danno voti né gradi: ogni membro conta allo stesso modo.',
     task: 'Fai:', learn: 'Impari:', reward: '+ [n] sats',
     badges: [
+      { name: 'Portafoglio', who: 'ogni membro', task: 'Aggiungi il tuo indirizzo bitcoin al profilo.', learn: 'Il tuo portafoglio, le tue chiavi: la DAO ti paga lì, e nessun altro può muovere quelle monete.', tone: 'ink' },
       { name: 'Voce', who: 'ogni membro', task: 'Vota una proposta aperta.', learn: 'Un membro, un voto, dal telefono; il conteggio è pubblico e chiunque può rifarlo.', tone: 'teal' },
       { name: 'Proponente', who: 'ogni membro', task: 'Pubblica una proposta, anche piccola.', learn: 'Come un’idea diventa una decisione: il periodo di voto, il quorum, la maggioranza necessaria.', tone: 'teal' },
       { name: 'Costruttore', who: 'ogni membro', task: 'Prendi una bounty, consegnala, scrivi il resoconto.', learn: 'Come la tesoreria paga il lavoro: alla consegna, a rate, in pubblico.', tone: 'clay' },
-      { name: 'Portafoglio', who: 'ogni membro', task: 'Aggiungi il tuo indirizzo bitcoin al profilo.', learn: 'Il tuo portafoglio, le tue chiavi: la DAO ti paga lì, e nessun altro può muovere quelle monete.', tone: 'ink' },
     ],
     newsTitle: 'Notizie dalla zona',
     newsLead: 'Brevi post, i più recenti per primi.',
