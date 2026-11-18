@@ -10,9 +10,9 @@ type Strings = {
 
 export const C: Record<Lang, Strings> = {
   en: {
-    docTitle: 'A DAO and a co-op compared · byob.zone',
+    docTitle: 'DAO and a co-op compared · byob.zone',
     back: '← byob.zone',
-    title: 'A DAO and a co-op compared',
+    title: 'DAO and a co-op compared',
     lead: 'A DAO does the everyday work of a small co-op: shared decisions, a shared treasury, open accounts. Here is how it works, what it costs, and what to know first.',
     howTitle: 'How it works',
     howLead: 'Members discuss, propose and vote. The council, a few members chosen by the group, hold the keys to the shared wallet: for example, any 3 of 5 must sign before money moves.',
