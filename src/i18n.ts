@@ -23,7 +23,7 @@ type Strings = {
 export const T: Record<Lang, Strings> = {
   en: {
     title: 'Build Your Own Bitcoin DAO',
-    mission: 'Everything needed to run a small cooperative, without the paperwork.',
+    mission: 'Cooperate. Collaborate. Coordinate. Without the paperwork.',
     whatTitle: 'What is a DAO?',
     whatLead: 'A group of people who share a purpose and a pot of money, and run both together through an app instead of a registered company.',
     terms: [
@@ -34,7 +34,7 @@ export const T: Record<Lang, Strings> = {
     whatNote: 'Not a company and not a legal entity: no notary, no bank account, no accountant, no token.',
     whatMore: 'What a DAO is, and how it compares with a co-op →',
     whatMoreHref: 'https://github.com/Bitcoin-DAO/btc-dao/blob/main/docs/handout.md',
-    lead: 'Together, a community holds a bitcoin treasury. Members propose and vote from their phones; council members sign every payment on their own hardware; anyone can check every count and every coin.',
+    lead: 'Together, a community holds a bitcoin treasury. Members propose and vote from their phones; council members sign every payment with their own key, on an offline signing device; anyone can check every count and every coin.',
     howTitle: 'How a DAO is built',
     howLead: 'No company in the middle, no token, no account. Four steps, done by the people who will run it.',
     steps: [
@@ -85,7 +85,7 @@ export const T: Record<Lang, Strings> = {
   },
   it: {
     title: 'Costruisci la tua DAO Bitcoin',
-    mission: 'Tutto ciò che serve per gestire una piccola cooperativa, senza le carte.',
+    mission: 'Cooperare. Collaborare. Coordinarsi. Senza le carte.',
     whatTitle: 'Che cos’è una DAO?',
     whatLead: 'Un gruppo di persone che condividono uno scopo e una cassa comune, e gestiscono entrambi insieme con un’app invece che con una società registrata.',
     terms: [
@@ -96,7 +96,7 @@ export const T: Record<Lang, Strings> = {
     whatNote: 'Non è una società né un ente giuridico: niente notaio, niente conto in banca, niente commercialista, niente token.',
     whatMore: 'Che cos’è una DAO, e il confronto con una cooperativa →',
     whatMoreHref: 'https://github.com/Bitcoin-DAO/btc-dao/blob/main/docs/handout.it.md',
-    lead: 'Insieme, una comunità custodisce una tesoreria in bitcoin. I membri propongono e votano dal telefono; i membri del consiglio firmano ogni pagamento con il proprio dispositivo; chiunque può verificare ogni conteggio e ogni moneta.',
+    lead: 'Insieme, una comunità custodisce una tesoreria in bitcoin. I membri propongono e votano dal telefono; i membri del consiglio firmano ogni pagamento con la propria chiave, su un dispositivo di firma offline; chiunque può verificare ogni conteggio e ogni moneta.',
     howTitle: 'Come si costruisce una DAO',
     howLead: 'Nessuna azienda in mezzo, nessun token, nessun account. Quattro passi, fatti da chi la gestirà.',
     steps: [
