@@ -37,6 +37,17 @@ function render(lang: Lang) {
   });
   document.querySelectorAll<HTMLButtonElement>('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
 
+  fill('terms', t.terms.map(([letter, word, text]) => {
+    const li = el('li', 'card step term');
+    const head = el('h3', '');
+    head.append(el('span', 'term-letter', letter), word.slice(1));
+    head.setAttribute('aria-label', word);
+    li.append(head, el('p', '', text));
+    return li;
+  }));
+  const more = document.getElementById('whatMore');
+  if (more) more.setAttribute('href', t.whatMoreHref);
+
   fill('steps', t.steps.map(([title, text], i) => {
     const li = el('li', 'card step');
     li.append(el('span', 'step-n', '0' + (i + 1)), el('h3', '', title), el('p', '', text));
