@@ -4,6 +4,11 @@ The home page of **byob.zone**: Build Your Own Bitcoin DAO. It introduces the id
 
 The DAOs themselves run [btc-dao](https://github.com/Bitcoin-DAO/btc-dao), each at its own address. This page holds no keys and has no sign-in; it only links to them.
 
+## Pages
+
+- `index.html`: the home page.
+- `compare.html`: how a DAO works, a co-op and a DAO side by side, and what to know first. Its text is in `src/compare-i18n.ts`, summarised from the btc-dao handout (`docs/handout.md`); when that changes, check this page.
+
 ## News posts
 
 Posts are in `content/news.json`, newest first, each in both languages. A post with `"next": true` is shown as coming up. Edit the file on GitHub and the site rebuilds by itself.
