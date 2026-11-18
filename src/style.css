@@ -153,3 +153,32 @@ h1, h2, h3, p { margin: 0; }
 .foot-left { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; }
 
 a:focus-visible, button:focus-visible { outline: 3px solid var(--dot); outline-offset: 2px; }
+
+/* Compare page */
+.hero-sub { padding-top: 40px; padding-bottom: 40px; }
+.hero-sub h1 { font-size: clamp(34px, 5vw, 52px); max-width: 18ch; margin-top: 20px; }
+.back { font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; }
+.back:hover { text-decoration: underline; }
+.steps-5 { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.cmp-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.cmp { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+.cmp th, .cmp td { text-align: left; vertical-align: top; padding: 16px 20px; border-top: 1px solid var(--line-2); }
+.cmp thead th { border-top: 0; background: var(--soft); font-family: var(--mono); font-size: 14px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.cmp tbody th { font-weight: 600; width: 24%; }
+.cmp td { color: var(--ink-2); width: 38%; }
+.cmp td.cmp-dao { color: var(--ink); font-weight: 500; }
+.cmp thead th:nth-child(2)::before { content: ''; display: inline-block; width: 0.55em; height: 0.55em; background: var(--orange); margin-right: 0.5em; vertical-align: 0.05em; }
+.cmp-note { margin-top: 16px; line-height: 1.55; max-width: 44rem; }
+.cmp-note a { color: var(--ink); }
+@media (max-width: 640px) {
+  .cmp thead { display: none; }
+  .cmp, .cmp tbody, .cmp tr, .cmp th, .cmp td { display: block; width: auto; }
+  .cmp tr { padding: 16px 20px; border-top: 1px solid var(--line-2); }
+  .cmp tr:first-child { border-top: 0; }
+  .cmp tbody th, .cmp td { padding: 0; border: 0; width: auto; }
+  .steps-5, .know { grid-template-columns: 1fr; }
+  .cmp tbody th { margin-bottom: 8px; font-size: 17px; }
+  .cmp td { margin-top: 6px; }
+  .cmp td::before { content: attr(data-label); display: block; font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+}

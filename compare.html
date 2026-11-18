@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- CSP -->
+  <title>A co-op and a DAO compared · byob.zone</title>
+  <meta name="description" content="How a Bitcoin DAO works, how it compares with a small co-op, and what to know before starting one." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#10292E" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="wordmark" href="/" aria-label="byob.zone">
+        <span class="wm-a" aria-hidden="true">byob</span><span class="wm-dot" aria-hidden="true"></span><span class="wm-b" aria-hidden="true">zone</span>
+      </a>
+      <div class="lang" role="group" aria-label="Language / Lingua">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="it" aria-pressed="false">IT</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero hero-sub">
+      <a class="back" href="/" data-t="back"></a>
+      <h1 data-t="title"></h1>
+      <p class="lead" data-t="lead"></p>
+    </section>
+
+    <section class="wrap block">
+      <h2 class="h2" data-t="howTitle"></h2>
+      <p class="sub" data-t="howLead"></p>
+      <ol class="steps steps-5" id="flow"></ol>
+    </section>
+
+    <section class="wrap block">
+      <h2 class="h2" data-t="cmpTitle"></h2>
+      <p class="sub" data-t="cmpLead"></p>
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead><tr><th scope="col"><span class="sr" data-t="cmpTopic"></span></th><th scope="col" data-t="colDao"></th><th scope="col" data-t="colCoop"></th></tr></thead>
+          <tbody id="cmp"></tbody>
+        </table>
+      </div>
+      <p class="note cmp-note"><span data-t="cmpNote"></span> <span data-t="sources"></span> <a href="https://notaionline.it/documenti/costituzione-societa/cooperativa/" rel="noopener">NotaiOnline</a> · <a href="https://www.emiliaromagnastartup.it/it/node/5192" rel="noopener">Emilia-Romagna Startup</a> · <a href="https://www.businessonline.it/articoli/quanto-costa-un-commercialista-allanno-per-la-gestione-di-una-srl-i-criteri-e-variabili-da-considerare.html" rel="noopener">BusinessOnline</a></p>
+    </section>
+
+    <section class="band-light">
+      <div class="wrap block">
+        <h2 class="h2" data-t="knowTitle"></h2>
+        <ul class="steps know" id="know"></ul>
+      </div>
+    </section>
+
+    <section class="wrap block">
+      <a class="btn" href="/" data-t="home"></a>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span class="foot-left">
+      <span class="wordmark wordmark-ink small" aria-hidden="true"><span class="wm-a">byob</span><span class="wm-dot"></span><span class="wm-b">zone</span></span>
+      <span data-t="footer"></span>
+    </span>
+    <span class="foot-right">
+      <span><span data-t="contact"></span> <a href="mailto:admin@byob.zone">admin@byob.zone</a></span>
+      <a href="https://njump.me/npub1zmf42qv0gx8ya07ph3qanmmal844qts2l6tss46svfjl0qng8akqyfe85w" rel="noopener">Nostr</a>
+      <span class="mono">testnet4</span>
+    </span>
+  </footer>
+
+  <script type="module" src="/src/compare.ts"></script>
+</body>
+</html>

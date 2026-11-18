@@ -17,6 +17,7 @@ const csp = [
 
 export default defineConfig({
   base: '/',
+  build: { rollupOptions: { input: { main: 'index.html', compare: 'compare.html' } } },
   plugins: [{
     name: 'csp',
     transformIndexHtml(html, ctx) {
