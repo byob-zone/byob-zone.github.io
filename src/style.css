@@ -168,7 +168,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--dot); outline-o
 .cmp tbody th { font-weight: 600; width: 24%; }
 .cmp td { color: var(--ink-2); width: 38%; }
 .cmp td.cmp-dao { color: var(--ink); font-weight: 500; }
-.cmp thead th:last-child::before { content: ''; display: inline-block; width: 0.55em; height: 0.55em; background: var(--orange); margin-right: 0.5em; vertical-align: 0.05em; }
+.cmp thead th:nth-child(2)::before { content: ''; display: inline-block; width: 0.55em; height: 0.55em; background: var(--orange); margin-right: 0.5em; vertical-align: 0.05em; }
 .cmp-note { margin-top: 16px; line-height: 1.55; max-width: 44rem; }
 .cmp-note a { color: var(--ink); }
 @media (max-width: 640px) {

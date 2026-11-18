@@ -44,7 +44,7 @@ function render(lang: Lang) {
     th.scope = 'row';
     const a = el('td', '', coop); a.dataset.label = c.colCoop;
     const b = el('td', 'cmp-dao', dao); b.dataset.label = c.colDao;
-    tr.append(th, a, b);
+    tr.append(th, b, a);
     return tr;
   }));
 
