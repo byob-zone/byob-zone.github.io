@@ -10,9 +10,9 @@ type Strings = {
 
 export const C: Record<Lang, Strings> = {
   en: {
-    docTitle: 'A co-op and a DAO compared · byob.zone',
+    docTitle: 'DAO and a co-op compared · byob.zone',
     back: '← byob.zone',
-    title: 'A co-op and a DAO compared',
+    title: 'DAO and a co-op compared',
     lead: 'A DAO does the everyday work of a small co-op: shared decisions, a shared treasury, open accounts. Here is how it works, what it costs, and what to know first.',
     howTitle: 'How it works',
     howLead: 'Members discuss, propose and vote. The council, a few members chosen by the group, hold the keys to the shared wallet: for example, any 3 of 5 must sign before money moves.',
@@ -45,9 +45,9 @@ export const C: Record<Lang, Strings> = {
     home: 'Back to byob.zone',
   },
   it: {
-    docTitle: 'Cooperativa e DAO a confronto · byob.zone',
+    docTitle: 'DAO e cooperativa a confronto · byob.zone',
     back: '← byob.zone',
-    title: 'Cooperativa e DAO a confronto',
+    title: 'DAO e cooperativa a confronto',
     lead: 'Una DAO svolge il lavoro quotidiano di una piccola cooperativa: decisioni condivise, una tesoreria comune, conti aperti a tutti. Ecco come funziona, quanto costa, e cosa sapere prima.',
     howTitle: 'Come funziona',
     howLead: 'I membri discutono, propongono e votano. Il consiglio, pochi membri scelti dal gruppo, tiene le chiavi del portafoglio comune: per esempio, devono firmare 3 su 5 prima che il denaro si muova.',
