@@ -39,7 +39,7 @@ export const T: Record<Lang, Strings> = {
     howLead: 'Four steps, done by the people who will run it.',
     steps: [
       ['Cut the keys', 'Each council member makes a key at the workshop: dice, a SeedSigner, a card written by hand. No computer ever sees it.'],
-      ['Found it', 'Five phones, one meeting. The founders sign up, the council approves, and the DAO exists.'],
+      ['Found it', 'One meeting, a phone each. The founders sign up, the council approves, and the DAO exists.'],
       ['Run it', 'Members propose and vote. Payouts are paid in rounds, in tranches on delivery, signed by the council.'],
       ['Check it', 'Every phone recounts every vote and rechecks every payment against the blockchain. Nothing to trust.'],
     ],
@@ -101,7 +101,7 @@ export const T: Record<Lang, Strings> = {
     howLead: 'Quattro passi, fatti da chi la gestirà.',
     steps: [
       ['Taglia le chiavi', 'Ogni membro del consiglio crea una chiave al workshop: dadi, un SeedSigner, una scheda scritta a mano. Nessun computer la vede mai.'],
-      ['Fondala', 'Cinque telefoni, un incontro. I fondatori si iscrivono, il consiglio approva, e la DAO esiste.'],
+      ['Fondala', 'Un incontro, un telefono a testa. I fondatori si iscrivono, il consiglio approva, e la DAO esiste.'],
       ['Gestiscila', 'I membri propongono e votano. I pagamenti avvengono a turni, a rate alla consegna, firmati dal consiglio.'],
       ['Verificala', 'Ogni telefono riconta ogni voto e ricontrolla ogni pagamento sulla blockchain. Niente di cui fidarsi alla cieca.'],
     ],
