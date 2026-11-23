@@ -4,7 +4,8 @@ type Strings = {
   title: string; mission: string; lead: string;
   whatTitle: string; whatLead: string; terms: [string, string, string][]; whatNote: string; whatMore: string; whatMoreHref: string;
   howTitle: string; howLead: string; steps: [string, string][];
-  firstBuilt: string; status: string; alphaText: string; enter: string; pulseSoon: string;
+  firstBuilt: string; status: string; alphaText: string; enter: string; joinGroup: string; pulseSoon: string;
+  joinTitle: string; joinLead: string; joinSteps: [string, string][]; joinNote: string;
   facts: [string, string][];
   badgeKicker: string; badgeTitle: string; badgeLead: string; badgeFoot: string;
   task: string; learn: string; reward: string;
@@ -45,13 +46,25 @@ export const T: Record<Lang, Strings> = {
     ],
     firstBuilt: 'DAO Dashboard',
     status: 'Founding at the workshop',
-    alphaText: 'A private alpha on testnet4: five council members, keys cut by hand at a workshop, 3 of 5 to sign. Practice votes of ten minutes, real rules, a real record.',
+    alphaText: 'A private alpha on testnet4: three council members, keys cut by hand at a workshop, 2 of 3 to sign. Practice votes of ten minutes at the founding, then three-day votes; real rules, a real record.',
     enter: 'Enter ALPHA DAO',
+    joinGroup: 'Join the group',
+    joinTitle: 'Join ALPHA DAO',
+    joinLead: 'Nobody joins by clicking a button. You join through people: a member who knows you, and two council members who check your key with you. It takes a few days, and the group is where it starts.',
+    joinSteps: [
+      ['Join the group', 'Say hello in the ALPHA DAO group on WhatsApp. Ask anything; read how the DAO works; come to a meeting.'],
+      ['Find a sponsor', 'A member who knows you personally agrees to propose you. Members know the dues and when the DAO meets: ask them.'],
+      ['Sign up on your phone', 'Your sponsor sends you the link. On the DAO’s site, choose Become a member: your phone makes your key and protects it with a passkey. Post your code in the group.'],
+      ['Check your short code', 'Read your short code to two council members on a video call, or to one of them in person. This is what makes sure the key in the record is yours.'],
+      ['The members vote', 'Your sponsor proposes you; the members vote; the council confirms the new member list. Then you are a member.'],
+      ['Start doing', 'Add your bitcoin address, pay your dues, cast your first vote: your first badges, below.'],
+    ],
+    joinNote: 'Before the founding, only the founders invited to the workshop sign up. Until then, the group is the way in.',
     pulseSoon: 'Once ALPHA DAO is founded, its live pulse shows here: members, treasury, the vote that is open, the latest payout.',
-    facts: [['Council', '3 of 5'], ['Network', 'testnet4'], ['Members', '—'], ['Treasury', '—']],
+    facts: [['Council', '2 of 3'], ['Network', 'testnet4'], ['Members', '—'], ['Treasury', '—']],
     badgeKicker: 'Badge bounties',
     badgeTitle: 'Learning by doing',
-    badgeLead: 'No manual to read first. Each badge is a small bounty: do the task for real, in the DAO, and the DAO pays you a few sats. The badge appears by itself: the DAO’s own record shows you did it. Four badges, and you have done what a member does.',
+    badgeLead: 'No manual to read first. Each badge is a small bounty: do the task for real, in the DAO, and the DAO pays you a few sats. The badge appears by itself: the DAO’s own record shows you did it. Five badges, and you have done what a member does.',
     badgeFoot: 'Nobody hands out badges: every phone reads them from the DAO’s record, so anyone can check them. They carry no votes and no rank: every member counts the same.',
     task: 'Do:', learn: 'You learn:', reward: '+ [n] sats',
     badges: [
@@ -59,6 +72,7 @@ export const T: Record<Lang, Strings> = {
       { name: 'Voice', who: 'every member', task: 'Cast a vote on an open proposal.', learn: 'One member, one vote, from your phone; the count is published and anyone can redo it.', tone: 'teal' },
       { name: 'Proposer', who: 'every member', task: 'Publish a proposal, even a small one.', learn: 'How an idea becomes a decision: the voting period, the quorum, the majority it needs.', tone: 'teal' },
       { name: 'Builder', who: 'every member', task: 'Claim a bounty, deliver it, report it.', learn: 'How the treasury pays for work: on delivery, in tranches, in public.', tone: 'clay' },
+      { name: 'Paid-up', who: 'once dues are set', task: 'Pay your dues to the treasury from your own address.', learn: 'The other half of your wallet: you hold the keys and spend from it. Your payment shows it was you, with nothing to fill in.', tone: 'ink' },
     ],
     newsTitle: 'News from the zone',
     newsLead: 'Short posts, newest first.',
@@ -107,13 +121,25 @@ export const T: Record<Lang, Strings> = {
     ],
     firstBuilt: 'Dashboard DAO',
     status: 'Fondazione al workshop',
-    alphaText: 'Un’alfa privata su testnet4: cinque membri del consiglio, chiavi tagliate a mano in un workshop, 3 su 5 per firmare. Votazioni di prova da dieci minuti, regole vere, un registro vero.',
+    alphaText: 'Un’alfa privata su testnet4: tre membri del consiglio, chiavi tagliate a mano in un workshop, 2 su 3 per firmare. Votazioni di prova da dieci minuti alla fondazione, poi votazioni di tre giorni; regole vere, un registro vero.',
     enter: 'Entra in ALPHA DAO',
+    joinGroup: 'Entra nel gruppo',
+    joinTitle: 'Entrare in ALPHA DAO',
+    joinLead: 'Non si entra cliccando un pulsante. Si entra tramite persone: un membro che ti conosce, e due membri del consiglio che verificano la tua chiave con te. Ci vuole qualche giorno, e si comincia dal gruppo.',
+    joinSteps: [
+      ['Entra nel gruppo', 'Saluta nel gruppo WhatsApp di ALPHA DAO. Chiedi quello che vuoi; scopri come funziona la DAO; vieni a un incontro.'],
+      ['Trova chi ti presenta', 'Un membro che ti conosce di persona accetta di proporti. I membri conoscono la quota e quando si incontra la DAO: chiedi a loro.'],
+      ['Iscriviti dal telefono', 'Chi ti presenta ti manda il link. Sul sito della DAO scegli Diventa membro: il telefono crea la tua chiave e la protegge con una passkey. Pubblica il tuo codice nel gruppo.'],
+      ['Verifica il codice breve', 'Leggi il tuo codice breve a due membri del consiglio in videochiamata, o a uno di loro di persona. È ciò che garantisce che la chiave nel registro sia la tua.'],
+      ['I membri votano', 'Chi ti presenta ti propone; i membri votano; il consiglio conferma il nuovo elenco dei membri. Da lì sei membro.'],
+      ['Comincia a fare', 'Aggiungi il tuo indirizzo bitcoin, paga la quota, dai il tuo primo voto: i tuoi primi badge, qui sotto.'],
+    ],
+    joinNote: 'Prima della fondazione si iscrivono solo i fondatori invitati al workshop. Fino ad allora, il gruppo è la porta d’ingresso.',
     pulseSoon: 'Una volta fondata ALPHA DAO, qui si vede il suo battito dal vivo: membri, tesoreria, la votazione aperta, l’ultimo pagamento.',
-    facts: [['Consiglio', '3 su 5'], ['Rete', 'testnet4'], ['Membri', '—'], ['Tesoreria', '—']],
+    facts: [['Consiglio', '2 su 3'], ['Rete', 'testnet4'], ['Membri', '—'], ['Tesoreria', '—']],
     badgeKicker: 'Badge bounty',
     badgeTitle: 'Imparare facendo',
-    badgeLead: 'Nessun manuale da leggere prima. Ogni badge è una piccola bounty: fai il compito davvero, nella DAO, e la DAO ti paga qualche sat. Il badge appare da solo: il registro della DAO mostra che l’hai fatto. Quattro badge, e hai fatto ciò che fa un membro.',
+    badgeLead: 'Nessun manuale da leggere prima. Ogni badge è una piccola bounty: fai il compito davvero, nella DAO, e la DAO ti paga qualche sat. Il badge appare da solo: il registro della DAO mostra che l’hai fatto. Cinque badge, e hai fatto ciò che fa un membro.',
     badgeFoot: 'Nessuno assegna i badge: ogni telefono li legge dal registro della DAO, quindi chiunque può verificarli. Non danno voti né gradi: ogni membro conta allo stesso modo.',
     task: 'Fai:', learn: 'Impari:', reward: '+ [n] sats',
     badges: [
@@ -121,6 +147,7 @@ export const T: Record<Lang, Strings> = {
       { name: 'Voce', who: 'ogni membro', task: 'Vota una proposta aperta.', learn: 'Un membro, un voto, dal telefono; il conteggio è pubblico e chiunque può rifarlo.', tone: 'teal' },
       { name: 'Proponente', who: 'ogni membro', task: 'Pubblica una proposta, anche piccola.', learn: 'Come un’idea diventa una decisione: il periodo di voto, il quorum, la maggioranza necessaria.', tone: 'teal' },
       { name: 'Costruttore', who: 'ogni membro', task: 'Prendi una bounty, consegnala, scrivi il resoconto.', learn: 'Come la tesoreria paga il lavoro: alla consegna, a rate, in pubblico.', tone: 'clay' },
+      { name: 'In regola', who: 'quando c’è una quota', task: 'Paga la quota alla tesoreria dal tuo indirizzo.', learn: 'L’altra metà del portafoglio: hai le chiavi e spendi da lì. Il pagamento mostra che sei tu, senza nulla da compilare.', tone: 'ink' },
     ],
     newsTitle: 'Notizie dalla zona',
     newsLead: 'Brevi post, i più recenti per primi.',

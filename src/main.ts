@@ -54,6 +54,17 @@ function render(lang: Lang) {
     return li;
   }));
 
+  fill('joinSteps', t.joinSteps.map(([title, text], i) => {
+    const li = el('li', 'card step');
+    li.append(el('span', 'step-n', '0' + (i + 1)), el('h3', '', title), el('p', '', text));
+    return li;
+  }));
+  const group = document.getElementById('joinGroup');
+  if (group && DAOS[0].group) {
+    group.setAttribute('href', DAOS[0].group);
+    group.setAttribute('rel', 'noopener');
+  }
+
   renderDao(lang);
 
   fill('badges', t.badges.map((b, i) => {

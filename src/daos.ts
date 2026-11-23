@@ -3,7 +3,7 @@
  * A new DAO on byob.zone: add it here, with its relays and chain sources from its config/dao.json.
  */
 export const DAOS = [
-  { site: 'https://alpha.byob.zone', network: 'testnet4' },
+  { site: 'https://alpha.byob.zone', network: 'testnet4', group: 'https://chat.whatsapp.com/GmwQbxCv5Qr8Wkgpzgk7cJ' },
 ];
 
 export const CONNECT = [
